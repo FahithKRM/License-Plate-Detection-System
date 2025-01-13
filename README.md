@@ -23,11 +23,7 @@ This project implements a license plate detection system using YOLOv8 for object
 
 ---
 
-## Installation  
-
-### Prerequisites  
-- Python 3.8 or above  
-- A GPU (recommended for YOLOv8 inference)  
+## Installation   
 
 ### Setup  
 1. Clone this repository:  
@@ -39,9 +35,16 @@ This project implements a license plate detection system using YOLOv8 for object
    ```bash
    pip install -r requirements.txt
    ```
-3. Download the YOLOv8 weights:
-   - For vehicle detection: YOLOv8 COCO weights
-   - For license plate detection: Custom-trained YOLOv8 weights (place in the weights/ folder).
+3. Download the SORT files:
+- Clone the SORT repository or download the required files from [SORT GitHub](https://github.com/abewley/sort).
+- Place the SORT implementation files in the sort/ directory of your project.
+
+4. YOLOv8 models are already included in the repository:
+- For vehicle detection: YOLOv8 COCO models.
+- For license plate detection: Custom-trained YOLOv8 weights located in the models/ folder.
+
+Ensure Python 3.8 or above is installed. GPU is recommended for faster processing.
+
   
 ## Directory Structure
 license-plate-detection/
@@ -52,5 +55,7 @@ license-plate-detection/
 
 
 
-
+## Results
+- Output CSV: Includes bounding boxes, license plate text, and confidence scores.
+- Annotated Frames: Video frames saved with vehicle and license plate annotations.
 
