@@ -45,7 +45,9 @@ This project implements a license plate detection system using YOLOv8 for object
   
 ## Directory Structure
 license-plate-detection/
+
 ![image](https://github.com/user-attachments/assets/cde735bc-2413-4796-b1e4-61720bf5554b)
+
 ![image](https://github.com/user-attachments/assets/6170cbaf-e7a0-4de7-a0a9-df901898d4a2)
 
 
