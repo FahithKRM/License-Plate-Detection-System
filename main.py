@@ -4,10 +4,8 @@ import numpy as np
 from sort.sort import Sort
 from util import get_car, read_license_plate, write_csv
 
-# Initialize results dictionary
 results = {}
 
-# Initialize the tracker
 mot_tracker = Sort()
 
 # Load models
@@ -28,10 +26,8 @@ while ret:
     frame_nmr += 1
     ret, frame = cap.read()
     if ret:
-        # Initialize a dictionary for the current frame
         results[frame_nmr] = {}
 
-        # Detect vehicles in the current frame
         detections = coco_model(frame)[0]
         detections_ = []
 
@@ -43,24 +39,19 @@ while ret:
         # Track vehicles
         track_ids = mot_tracker.update(np.asarray(detections_))
 
-        # Detect license plates in the current frame
         license_plates = license_plate_detector(frame)[0]
 
         for license_plate in license_plates.boxes.data.tolist():
             x1, y1, x2, y2, score, class_id = license_plate
 
-            # Assign the detected license plate to a tracked car
             xcar1, ycar1, xcar2, ycar2, car_id = get_car(license_plate, track_ids)
 
             if car_id != -1:
-                # Crop the license plate area
                 license_plate_crop = frame[int(y1):int(y2), int(x1):int(x2), :]
 
-                # Convert to grayscale and apply binary inverse threshold
                 license_plate_crop_gray = cv2.cvtColor(license_plate_crop, cv2.COLOR_BGR2GRAY)
                 _, license_plate_crop_thresh = cv2.threshold(license_plate_crop_gray, 64, 255, cv2.THRESH_BINARY_INV)
 
-                # Read the license plate number
                 license_plate_text, license_plate_text_score = read_license_plate(license_plate_crop_thresh)
 
                 if license_plate_text is not None:
@@ -74,7 +65,6 @@ while ret:
                         }
                     }
 
-# Check if results are populated
 print(f"Results: {results}")
 
 # Write results to CSV
