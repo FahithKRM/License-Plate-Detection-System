@@ -48,6 +48,7 @@ This project implements a license plate detection system using YOLOv8 for object
 
 Ensure Python 3.8 or above is installed. GPU is recommended for faster processing.
 
+---
   
 ## Directory Structure
 license-plate-detection/
@@ -56,6 +57,7 @@ license-plate-detection/
 
 ![image](https://github.com/user-attachments/assets/6170cbaf-e7a0-4de7-a0a9-df901898d4a2)
 
+---
 
 ## Run the Code
 #### Input video Name is sample.mp4, Then can change the right name of the input files
@@ -72,6 +74,8 @@ license-plate-detection/
    ```bash
    python visualize.py
    ```
+   
+---
 
 ## Results
 - Output CSV: Includes bounding boxes, license plate text, and confidence scores.
