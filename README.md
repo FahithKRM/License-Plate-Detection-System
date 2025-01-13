@@ -31,13 +31,16 @@ This project implements a license plate detection system using YOLOv8 for object
    https://github.com/FahithKRM/License-Plate-Detection-System
    cd License-Plate-Detection-System
    ```
+   
 2. Install the required dependencies:  
    ```bash
    pip install -r requirements.txt
    ```
+   
 3. Download the SORT files:
 - Clone the SORT repository or download the required files from [SORT GitHub](https://github.com/abewley/sort).
 - Place the SORT implementation files in the sort/ directory of your project.
+
 
 4. YOLOv8 models are already included in the repository:
 - For vehicle detection: YOLOv8 COCO models.
@@ -54,8 +57,24 @@ license-plate-detection/
 ![image](https://github.com/user-attachments/assets/6170cbaf-e7a0-4de7-a0a9-df901898d4a2)
 
 
+## Run the Code
+#### Input video Name is sample.mp4, Then can change the right name of the input files
+- Run main.py with a sample video file to generate the test.csv file: 
+   ``` bash
+   python main.py
+   ```
+- Run the add_missing_data.py to interpolate missing values and smooth out the output for unmatched frames:
+   ```bash
+   python add_missing_data.py
+   ```
+
+- Finally run the visualize.py with the interpolated CSV file to generate a smooth and enhanced output for license plate detection:
+   ```bash
+   python visualize.py
+   ```
 
 ## Results
 - Output CSV: Includes bounding boxes, license plate text, and confidence scores.
 - Annotated Frames: Video frames saved with vehicle and license plate annotations.
+
 
