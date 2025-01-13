@@ -4,18 +4,6 @@ This project implements a license plate detection system using YOLOv8 for object
 
 ---
 
-## Table of Contents  
-- [Features](#features)  
-- [Technologies Used](#technologies-used)  
-- [Installation](#installation)  
-- [Usage](#usage)  
-- [Directory Structure](#directory-structure)  
-- [Results](#results)  
-- [Future Improvements](#future-improvements)  
-- [License](#license)  
-
----
-
 ## Features  
 - Detects vehicles (cars, trucks, buses) in video frames using YOLOv8.  
 - Tracks detected vehicles across frames with SORT.  
@@ -44,5 +32,26 @@ This project implements a license plate detection system using YOLOv8 for object
 ### Setup  
 1. Clone this repository:  
    ```bash
-   git clone https://github.com/yourusername/license-plate-detection.git
-   cd license-plate-detection
+   https://github.com/FahithKRM/License-Plate-Detection-System
+   cd License-Plate-Detection-System
+   ```
+2. Install the required dependencies:  
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Download the YOLOv8 weights:
+   - For vehicle detection: YOLOv8 COCO weights
+   - For license plate detection: Custom-trained YOLOv8 weights (place in the weights/ folder).
+  
+## Directory Structure
+license-plate-detection/
+├── main.py                 # Core pipeline for detection and tracking
+├── util.py                 # Helper functions (OCR, validation, formatting)
+├── add_missing_data.py     # Interpolates missing tracking data
+├── visualize.py            # visualize the data
+├── models/                 # YOLOv8 model weights
+├── results/                # Output CSV and annotated frames
+├── requirements.txt        # Python dependencies
+├── README.md               # Project documentation
+
+
