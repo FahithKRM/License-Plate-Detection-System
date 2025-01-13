@@ -45,13 +45,10 @@ This project implements a license plate detection system using YOLOv8 for object
   
 ## Directory Structure
 license-plate-detection/
-├── main.py                 # Core pipeline for detection and tracking
-├── util.py                 # Helper functions (OCR, validation, formatting)
-├── add_missing_data.py     # Interpolates missing tracking data
-├── visualize.py            # visualize the data
-├── models/                 # YOLOv8 model weights
-├── results/                # Output CSV and annotated frames
-├── requirements.txt        # Python dependencies
-├── README.md               # Project documentation
+![image](https://github.com/user-attachments/assets/cde735bc-2413-4796-b1e4-61720bf5554b)
+![image](https://github.com/user-attachments/assets/6170cbaf-e7a0-4de7-a0a9-df901898d4a2)
+
+
+
 
 
