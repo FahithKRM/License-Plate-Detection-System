@@ -81,4 +81,4 @@ license-plate-detection/
 - Output CSV: Includes bounding boxes, license plate text, and confidence scores.
 - Annotated Frames: Video frames saved with vehicle and license plate annotations.
 
-
+---
