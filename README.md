@@ -28,7 +28,7 @@ This project implements a license plate detection system using YOLOv8 for object
 ### Setup  
 1. Clone this repository:  
    ```bash
-   https://github.com/FahithKRM/License-Plate-Detection-System
+   https://github.com/FahithKRM/License-Plate-Detection-System.git
    cd License-Plate-Detection-System
    ```
    
